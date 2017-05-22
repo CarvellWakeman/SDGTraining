@@ -31,3 +31,8 @@ If you are having trouble using git and github to manage this training project, 
   * This project is for training purposes and may contain issues and bugs
   
   
+## Scratchpad
+# Reset database
+# Enable-Migrations -Force
+# Add-Migration init
+# Update-Database
