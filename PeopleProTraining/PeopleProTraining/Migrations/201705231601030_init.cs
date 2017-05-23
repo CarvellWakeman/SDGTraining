@@ -12,7 +12,7 @@ namespace PeopleProTraining.Migrations
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
-                        Title = c.String(maxLength: 60),
+                        Title = c.String(nullable: false, maxLength: 60),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -21,7 +21,7 @@ namespace PeopleProTraining.Migrations
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
-                        Title = c.String(maxLength: 60),
+                        Title = c.String(nullable: false, maxLength: 60),
                         BuildingID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ID)
@@ -33,12 +33,12 @@ namespace PeopleProTraining.Migrations
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
-                        Name = c.String(maxLength: 60),
+                        Name = c.String(nullable: false, maxLength: 60),
                         Birthday = c.DateTime(nullable: false),
                         DepartmentID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ID)
-                .ForeignKey("dbo.Departments", t => t.DepartmentID, cascadeDelete: true)
+                .ForeignKey("dbo.Departments", t => t.DepartmentID, cascadeDelete:true)
                 .Index(t => t.DepartmentID);
             
         }

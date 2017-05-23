@@ -32,7 +32,7 @@ If you are having trouble using git and github to manage this training project, 
   
   
 ## Scratchpad
-# Reset database
+## Reset database
 # Enable-Migrations -Force
 # Add-Migration init
 # Update-Database

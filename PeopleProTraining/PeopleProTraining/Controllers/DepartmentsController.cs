@@ -43,9 +43,10 @@ namespace PeopleProTraining.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Title,BuildingId")] Department department) {
+        public ActionResult Create([Bind(Include = "ID,Title,BuildingID")] Department department) {
             if (ModelState.IsValid) {
                 try {
+                    // Checking for valid BuildingID
                     db.Departments.Add(department);
                     db.SaveChanges();
                 } catch (Exception e) {
@@ -84,7 +85,7 @@ namespace PeopleProTraining.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Title,BuildingId")] Department department) {
+        public ActionResult Edit([Bind(Include = "ID,Title,BuildingID")] Department department) {
             if (ModelState.IsValid) {
                 db.Entry(department).State = EntityState.Modified;
                 db.SaveChanges();

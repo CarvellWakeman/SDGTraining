@@ -13,7 +13,7 @@ namespace PeopleProTraining.Models
         // Members
         public int ID { get; set; }
 
-        [StringLength(60, MinimumLength = 1)]
+        [StringLength(60, MinimumLength = 1), Required]
         public string Name { get; set; }
 
         [Display(Name = "Birthday"), DataType(DataType.Date)]
@@ -23,6 +23,7 @@ namespace PeopleProTraining.Models
         // Foreign key to department
         [ForeignKey("Department")]
         public int DepartmentID { get; set; }
+
         public virtual Department Department { get; set; }
     }
 

@@ -13,7 +13,7 @@ namespace PeopleProTraining.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201705221945456_init"; }
+            get { return "201705231601030_init"; }
         }
         
         string IMigrationMetadata.Source

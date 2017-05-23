@@ -9,7 +9,7 @@ namespace PeopleProTraining.Models
         // Members
         public int ID { get; set; }
 
-        [StringLength(60, MinimumLength = 1)]
+        [StringLength(60, MinimumLength = 1), Required]
         public string Title { get; set; }
     }
 }

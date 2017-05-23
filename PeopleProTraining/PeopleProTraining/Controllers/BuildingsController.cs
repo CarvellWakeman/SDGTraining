@@ -49,7 +49,8 @@ namespace PeopleProTraining.Controllers
                     db.Buildings.Add(building);
                     db.SaveChanges();
                 } catch (Exception e) {
-                    Console.WriteLine(e.ToString());
+                    System.Diagnostics.Debug.WriteLine("ERRROR HAS OCCURRED");
+                    System.Diagnostics.Debug.WriteLine(e.ToString());
                 }
 
                 return RedirectToAction("Index");
@@ -99,15 +100,20 @@ namespace PeopleProTraining.Controllers
             }
 
             return View(building);
-        }
+       } 
 
         // POST: Buildings/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id) {
-            Building building = db.Buildings.Find(id);
-            db.Buildings.Remove(building);
-            db.SaveChanges();
+            try {
+                Building building = db.Buildings.Find(id);
+                db.Buildings.Remove(building);
+                db.SaveChanges();
+            } catch (Exception e) {
+                System.Diagnostics.Debug.WriteLine(e.ToString());
+            }
+
             return RedirectToAction("Index");
         }
 

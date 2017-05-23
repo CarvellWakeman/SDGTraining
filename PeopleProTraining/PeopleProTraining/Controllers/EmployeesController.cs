@@ -43,7 +43,7 @@ namespace PeopleProTraining.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name,Birthday,Department")] Employee employee) {
+        public ActionResult Create([Bind(Include = "ID,Name,Birthday,DepartmentID")] Employee employee) {
             if (ModelState.IsValid) {
                 try {
                     db.Employees.Add(employee);
@@ -78,7 +78,7 @@ namespace PeopleProTraining.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name,Birthday,Department")] Employee employee) {
+        public ActionResult Edit([Bind(Include = "ID,Name,Birthday,DepartmentID")] Employee employee) {
             if (ModelState.IsValid) {
                 db.Entry(employee).State = EntityState.Modified;
                 db.SaveChanges();

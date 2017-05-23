@@ -13,7 +13,7 @@
     <tr>
         <th>@Html.DisplayNameFor(model => model.Title)</th>
         <th>@Html.DisplayNameFor(model => model.ID)</th>
-        <th>@Html.DisplayNameFor(model => model.BuildingID)</th>
+        <th>@Html.DisplayNameFor(model => model.Building)</th>
         <th></th>
     </tr>
 
@@ -21,7 +21,7 @@
     <tr>
         <td>@Html.DisplayFor(modelItem => item.Title)</td>
         <td>@Html.DisplayFor(modelItem => item.ID)</td>
-        <td>@Html.DisplayFor(modelItem => item.BuildingID)</td>
+        <td>@Html.DisplayFor(modelItem => item.Building.Title)</td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ID }) |
