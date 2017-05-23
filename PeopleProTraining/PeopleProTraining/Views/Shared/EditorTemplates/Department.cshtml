@@ -1,0 +1,19 @@
+﻿@model PeopleProTraining.Models.Department
+
+@* Title *@
+<div class="form-group">
+    @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+@* BuildingID *@
+<div class="form-group">
+    @Html.LabelFor(model => model.BuildingID, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.BuildingID, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.BuildingID, "", new { @class = "text-danger" })
+    </div>
+</div>

@@ -207,6 +207,9 @@
     <Content Include="Views\Shared\DisplayTemplates\Employee.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Department.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Building.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Employee.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Department.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Building.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -216,7 +219,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Shared\EditorTemplates\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PeopleProTraining.Core\PeopleProTraining.Core.csproj">
