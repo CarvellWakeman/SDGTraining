@@ -1,0 +1,12 @@
+﻿@model PeopleProTraining.Models.Building
+
+<tr>
+    <td>@Model.Title</td><!-- Html.DisplayFor(modelItem => Model.Name) -->
+    <td>@Model.ID</td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Details", "Details", new { id = Model.ID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = Model.ID })
+    </td>
+</tr>
+
