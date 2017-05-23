@@ -37,6 +37,7 @@ namespace PeopleProTraining
                 name: "Buildings",
                 url: "{controller}/{action}/{name}/{id}"
             );
+
         }
     }
 }

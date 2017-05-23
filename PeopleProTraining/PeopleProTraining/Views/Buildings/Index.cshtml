@@ -6,9 +6,9 @@
 
 <h2>Buildings</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<p>@Html.ActionLink("Create New", "Create")</p>
+<p>@Html.ActionLink("Create New (with Ajax)", "CreateAjax", "Buildings")</p>
+
 <table class="table">
     <tr>
         <th>@Html.DisplayNameFor(model => model.Title)</th>
