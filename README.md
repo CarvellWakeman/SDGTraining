@@ -23,7 +23,7 @@ If you are having trouble using git and github to manage this training project, 
   D* Relational database for Employees, Departments, and Buildings
   D* Use of display and editor template
   D* Database project
-  * AJAX create and append to table for Departments or Buildings
+  D* AJAX create and append to table for Departments or Building
   * Windows security
   * Testing
 
