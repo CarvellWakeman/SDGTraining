@@ -16,6 +16,32 @@
         <th></th>
     </tr>
 
-    @Html.DisplayForModel()
+    <tbody id="buildingTable">
+        @Html.DisplayForModel()
+    </tbody>
 
 </table>
+
+
+<br />
+@section scripts
+{
+    <script type="text/javascript" src="~/Scripts/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+}
+@using( Ajax.BeginForm("CreateWithAjax", "Buildings",
+     new AjaxOptions
+     {
+         HttpMethod = "POST",
+         UpdateTargetId = "buildingTable",
+         InsertionMode = InsertionMode.InsertAfter
+     },
+     htmlAttributes: new { enctype = "multipart/form-data" }
+)) { 
+    @Html.AntiForgeryToken()
+    <h1></h1>
+    <h2>
+        Title: @Html.TextBox("buildingTitle")<br />
+        <input type="submit" value="Create (Ajax)" />
+    </h2>
+}

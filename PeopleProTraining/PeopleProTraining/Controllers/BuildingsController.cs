@@ -37,9 +37,31 @@ namespace PeopleProTraining.Controllers
         public ActionResult Create() {
             return View();
         }
-        public ActionResult CreateAjax()
+
+        [HttpPost]
+        public PartialViewResult CreateWithAjax()
         {
-            return View();
+            string code = Request.Form["buildingTitle"];
+            Building b = new Building();
+            b.Title = code;
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    db.Buildings.Add(b);
+                    db.SaveChanges();
+                }
+                catch (Exception e)
+                {
+                    System.Diagnostics.Debug.WriteLine("ERRROR HAS OCCURRED");
+                    System.Diagnostics.Debug.WriteLine(e.ToString());
+                }
+
+            }
+
+
+            return PartialView("DisplayTemplates/Building", b);
         }
 
         // POST: Buildings/Create
